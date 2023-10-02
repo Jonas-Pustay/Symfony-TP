@@ -3,3 +3,24 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+accueil:
+    path: /accueil
+    controller: App\Controller\AccueilController::index
+
+contact_index:
+    path: /contact
+    controller: App\Controller\ContactController::index
+    methods: GET
+
+contact_submit:
+    path: /contact
+    controller: App\Controller\ContactController::submit
+    methods: POST
+
+service_index:
+    path: /service
+    controller: App\Controller\ServiceController::index
+    methods: GET
+
+
