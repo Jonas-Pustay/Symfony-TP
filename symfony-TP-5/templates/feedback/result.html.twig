@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello FeedbackResultController!{% endblock %}
+
+{% block body %}
+
+{# templates/product.html.twig #}
+<h2> Feedback du produit </h2>
+<ul>
+    <li> nom --> {{ name }} </li>
+    <li> email --> {{ mail }} </li>
+    <li> note du produit --> {{ number }} </li>
+    <li> commentaire --> {{ comment }} </li>
+    <li> date de soumission --> {{ datetimet.year }} - {{ datetimet.month }} - {{ datetimet.day }}</li>
+</ul>
+
+{% endblock %}
