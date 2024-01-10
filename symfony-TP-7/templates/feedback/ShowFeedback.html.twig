@@ -6,14 +6,18 @@
 <style></style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    List of feedback :
+    <h1>    Hello {{ controller_name }}! ✅  </h1>
+    </br>
+    <h2>    List of feedback :  </h2>
+    </br>
     <ul>
         {% for feedback in feedbacks %}
-        <li><a href="{{ path('EditFeedback', {'id': loop.index - 1}) }}"> {{ feedback.name }} </a></li>
+        <li><a href="{{ path('EditFeedback', {'id': feedback.id}) }}"> {{ feedback.name }} - {{ feedback.email }} - {{ feedback.score }} - {{ feedback.comment }} </a></li>
         {% if loop.last %}
-        <p>Ceci est le dernier produit de la liste.</p>
+        </br>
+        </br>
+        </br>
+        <a href="{{ path('EditFeedback', {'id': 0}) }}"> Faire un feedback </a>
         {% endif %}
         {% else %}
         <li>Aucun produit trouvé.</li>
