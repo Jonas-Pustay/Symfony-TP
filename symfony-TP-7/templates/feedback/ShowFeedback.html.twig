@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello FeedbackController!{% endblock %}
+
+{% block body %}
+<style></style>
+
+<div class="example-wrapper">
+    <h1>Hello {{ controller_name }}! ✅</h1>
+
+    List of feedback :
+    <ul>
+        {% for feedback in feedbacks %}
+        <li><a href="{{ path('EditFeedback', {'id': loop.index - 1}) }}"> {{ feedback.name }} </a></li>
+        {% if loop.last %}
+        <p>Ceci est le dernier produit de la liste.</p>
+        {% endif %}
+        {% else %}
+        <li>Aucun produit trouvé.</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
